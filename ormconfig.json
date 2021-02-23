@@ -4,7 +4,9 @@
     "port": 5432,
     "username": "postgres",
     "password": "1199",
-    "database": "nps"
-      
+    "database": "nps",
+    "cli":{
+    "migrationsDir":"./src/database/migrations"
+    }
   }
   
