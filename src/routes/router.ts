@@ -1,4 +1,5 @@
 import {Router} from 'express'
+import {UserController} from '../controllers/UserController'
 
 /**
  * GET = =Buscar
@@ -11,10 +12,10 @@ import {Router} from 'express'
 //https://localhost:3333/users
 
 const router = Router();
-router.get('/', (request, response)=>{
-  //return response.send('ola')
-  return response.json({mensagem:'Olá Devs'})
-})
+const userController = new UserController
+router.post('/users', userController.create)
+//return response.send('ola')
+  
 // 1 param => Rota (Recurso API)
 // 2 param => request, response 
 router.post('/', (request, response)=>{
